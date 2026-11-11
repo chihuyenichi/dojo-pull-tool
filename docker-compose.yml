@@ -1,0 +1,11 @@
+services:
+  pull:
+    build: .
+    image: dojo-pull:latest
+    environment:
+      OUT_DIR: /outputs
+      KEY_PATH: /run/ssh-key
+    volumes:
+      - ./outputs:/outputs
+      - ${HOME}/.ssh/id_ed25519:/run/ssh-key:ro
+      - ./pull.conf:/app/pull.conf:ro

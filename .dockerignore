@@ -1,0 +1,7 @@
+outputs/
+*.md
+docker-compose.yml
+run-docker.sh
+.dockerignore
+Dockerfile
+.git/
